@@ -1,8 +1,6 @@
-<body> <!-- Inicio do corpo da página -->
 
-<p>carolina e mayara</p>
-<p>bianca</p>
-    <p>ryan</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body> <!-- Inicio do corpo da página -->
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
@@ -14,3 +12,48 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
   </body>
+
+  <style>
+    /* Estilo para ajustar o widget ao tamanho da tela */
+    .vw-plugin-wrapper {
+      max-width: 100%;
+      height: auto;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 9999;
+    }
+
+    /* Responsivo para telas menores */
+    @media (max-width: 768px) {
+      .vw-plugin-wrapper {
+        bottom: 5px;
+        right: 5px;
+      }
+    }
+
+    /* Ajustes para telas muito pequenas, como celulares */
+    @media (max-width: 480px) {
+      .vw-plugin-wrapper {
+        bottom: 2px;
+        right: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Inicio do corpo da página -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <!-- Script do VLibras -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
